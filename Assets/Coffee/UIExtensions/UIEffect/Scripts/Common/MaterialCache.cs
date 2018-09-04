@@ -7,8 +7,11 @@ namespace Coffee.UIExtensions
 	public class MaterialCache
 	{
 		public ulong hash { get; private set; }
+
 		public int referenceCount { get; private set; }
+
 		public Texture texture { get; private set; }
+
 		public Material material { get; private set; }
 
 #if UNITY_EDITOR
