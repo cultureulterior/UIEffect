@@ -53,6 +53,7 @@ namespace Coffee.UIExtensions
 #if UNITY_EDITOR
 		protected override void Reset()
 		{
+			m_Version = 300;
 			OnValidate();
 		}
 
