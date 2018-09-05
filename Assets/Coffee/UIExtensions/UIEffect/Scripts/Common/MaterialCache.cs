@@ -18,15 +18,19 @@ namespace Coffee.UIExtensions
 		[UnityEditor.InitializeOnLoadMethod]
 		static void ClearCache()
 		{
-			materialCache.Clear();
+			foreach (var cache in materialCaches)
+			{
+				cache.material = null;
+			}
+			materialCaches.Clear();
 		}
 #endif
 
-		public static List<MaterialCache> materialCache = new List<MaterialCache>();
+		public static List<MaterialCache> materialCaches = new List<MaterialCache>();
 
 		public static MaterialCache Register(ulong hash, Texture texture, System.Func<Material> onCreateMaterial)
 		{
-			var cache = materialCache.FirstOrDefault(x => x.hash == hash);
+			var cache = materialCaches.FirstOrDefault(x => x.hash == hash);
 			if (cache != null)
 			{
 				cache.referenceCount++;
@@ -36,11 +40,30 @@ namespace Coffee.UIExtensions
 				cache = new MaterialCache()
 				{
 					hash = hash,
-					texture = texture,
 					material = onCreateMaterial(),
 					referenceCount = 1,
 				};
-				materialCache.Add(cache);
+				materialCaches.Add(cache);
+			}
+			return cache;
+		}
+
+		public static MaterialCache Register(ulong hash, System.Func<Material> onCreateMaterial)
+		{
+			var cache = materialCaches.FirstOrDefault(x => x.hash == hash);
+			if (cache != null)
+			{
+				cache.referenceCount++;
+			}
+			if (cache == null)
+			{
+				cache = new MaterialCache()
+				{
+					hash = hash,
+					material = onCreateMaterial(),
+					referenceCount = 1,
+				};
+				materialCaches.Add(cache);
 			}
 			return cache;
 		}
@@ -55,9 +78,8 @@ namespace Coffee.UIExtensions
 			cache.referenceCount--;
 			if (cache.referenceCount <= 0)
 			{
-				MaterialCache.materialCache.Remove(cache);
+				MaterialCache.materialCaches.Remove(cache);
 				cache.material = null;
-				cache.texture = null;
 			}
 		}
 	}
