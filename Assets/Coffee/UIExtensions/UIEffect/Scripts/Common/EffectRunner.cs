@@ -53,10 +53,15 @@ namespace Coffee.UIExtensions
 //			this.updateMode = updateMode;
 //		}
 
+		static Action onWillRenderCanvases;
+
 		public void OnEnable(Action<float> callback)
 		{
-			Canvas.willRenderCanvases -= OnWillRenderCanvases;
-			Canvas.willRenderCanvases += OnWillRenderCanvases;
+			onWillRenderCanvases -= OnWillRenderCanvases;
+			onWillRenderCanvases += OnWillRenderCanvases;
+
+			Canvas.willRenderCanvases -= WillRenderCanvases;
+			Canvas.willRenderCanvases += WillRenderCanvases;
 
 			_time = 0;
 			this._callback = callback;
@@ -77,7 +82,7 @@ namespace Coffee.UIExtensions
 		public void OnDisable()
 		{
 			_callback = null;
-			Canvas.willRenderCanvases -= OnWillRenderCanvases;
+			onWillRenderCanvases -= OnWillRenderCanvases;
 		}
 
 		/// <summary>
@@ -94,6 +99,14 @@ namespace Coffee.UIExtensions
 		//################################
 		float _time = 0;
 		Action<float> _callback;
+
+		static void WillRenderCanvases()
+		{
+			if (onWillRenderCanvases != null)
+			{
+				onWillRenderCanvases.Invoke();
+			}
+		}
 
 		void OnWillRenderCanvases()
 		{
