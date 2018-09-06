@@ -20,6 +20,7 @@ namespace Coffee.UIExtensions.UIEffectDepricated
 		{
 			"156b57fee6ef941958e66a129ce387e2",	// UICustomEffect.cs
 			"a4961e148a8cd4fe0b84dddc2741894a",	// UICustomEffectEditor.cs
+			"7b1ed09bdf5e54042b5cd1fbe69361bf",	// MaterialBundle.cs
 		};
 
 
@@ -35,7 +36,7 @@ namespace Coffee.UIExtensions.UIEffectDepricated
 			if (files.Any())
 			{
 				StringBuilder sb = new StringBuilder();
-				sb.AppendFormat("<b><color=orange>[DeprecatedRemover]</color></b> {0} files have been removed.\n", files.Length);
+				sb.AppendFormat("<b><color=orange>[{0}]</color></b> {1} files have been removed.\n", typeof(DeprecatedRemover).Name, files.Length);
 
 				foreach (var path in files)
 				{
