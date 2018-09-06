@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using System;
 
 namespace Coffee.UIExtensions
 {
@@ -91,7 +92,7 @@ namespace Coffee.UIExtensions
 			if (0 < target.parameterIndex && _data[index] != value)
 			{
 				_data[index] = value;
-				_needUpload = true;
+//				_needUpload = true;
 				_updateIndices.Add((target.parameterIndex - 1) * (_channels / 4) + (channelId / 4));
 			}
 		}
@@ -141,7 +142,7 @@ namespace Coffee.UIExtensions
 
 		Texture2D _texture;
 		public RenderTexture _rt;
-		bool _needUpload;
+//		bool _needUpload;
 		int _propertyId;
 		readonly string _propertyName;
 		readonly int _channels;
@@ -157,6 +158,7 @@ namespace Coffee.UIExtensions
 		Matrix4x4 _matrix = default(Matrix4x4);
 		CommandBuffer _cb;
 		// = new CommandBuffer();
+		static List<Action> updates;
 
 		/// <summary>
 		/// Initialize this instance.
@@ -169,6 +171,18 @@ namespace Coffee.UIExtensions
 				return;
 			}
 #endif
+			if (updates == null)
+			{
+				updates = new List<Action>();
+				Canvas.willRenderCanvases += () =>
+				{
+					var count = updates.Count;
+					for (int i = 0; i < count; i++)
+					{
+						updates[i].Invoke();
+					}
+				};
+			}
 
 //			if (!_texture)
 //			{
@@ -201,70 +215,74 @@ namespace Coffee.UIExtensions
 				_rt.useMipMap = false;
 				_rt.anisoLevel = 0;
 
-				Canvas.willRenderCanvases += () =>
-				{
-					if (_updateIndices.Count == 0)
-					{
-						return;
-					}
-					
-					if (!_mesh)
-					{
-						_mesh = new Mesh();
-						_mesh.MarkDynamic();
-
-						if (_cb != null)
-						{
-							_cb.Dispose();
-							_cb = null;
-						}
-
-						_cb = new CommandBuffer();
-						_cb.SetRenderTarget(new RenderTargetIdentifier(_rt));
-						_cb.DrawMesh(_mesh, _matrix, _material);
-					}
-
-					_mesh.Clear();
-
-					_positions.Clear();
-					_colors.Clear();
-					_indices.Clear();
-
-					foreach (int index in _updateIndices)
-					{
-						var x = index % width;
-						var y = index / width;
-
-						float yMin = (y + 0) / (float)height * 2 - 1;
-						float yMax = (y + 1) / (float)height * 2 - 1;
-						float xMin = (x + 0) / (float)width * 2 - 1 + 0.5f / width;
-						float xMax = (x + 1) / (float)width * 2 - 1 + 0.5f / width;
-						_positions.Add(new Vector3(xMin, yMin));
-						_positions.Add(new Vector3(xMin, yMax));
-						_positions.Add(new Vector3(xMax, yMax));
-
-						_indices.Add(_indices.Count);
-						_indices.Add(_indices.Count);
-						_indices.Add(_indices.Count);
-
-						var color = new Color32(_data[index * 4 + 0], _data[index * 4 + 1], _data[index * 4 + 2], _data[index * 4 + 3]);
-
-						_colors.Add(color);
-						_colors.Add(color);
-						_colors.Add(color);
-					}
-
-					_mesh.SetVertices(_positions);
-					_mesh.SetColors(_colors);
-					_mesh.SetTriangles(_indices, 0);
-					_mesh.UploadMeshData(false);
-
-					_updateIndices.Clear();
-
-					Graphics.ExecuteCommandBuffer(_cb);
-				};
-
+				updates.Add(UpdateParameterTexture);
 			}
+		}
+
+		void UpdateParameterTexture()
+		{
+			if (_updateIndices.Count == 0)
+			{
+				return;
+			}
+
+			if (!_mesh)
+			{
+				_mesh = new Mesh();
+				_mesh.MarkDynamic();
+
+				if (_cb != null)
+				{
+					_cb.Dispose();
+					_cb = null;
+				}
+
+				_cb = new CommandBuffer();
+				_cb.SetRenderTarget(new RenderTargetIdentifier(_rt));
+				_cb.DrawMesh(_mesh, _matrix, _material);
+				//						_cb.DrawMesh(_mesh, _matrix, null);
+			}
+
+			_mesh.Clear();
+
+			_positions.Clear();
+			_colors.Clear();
+			_indices.Clear();
+
+			var width = _channels / 4;
+			var height = _instanceLimit;
+			foreach (int index in _updateIndices)
+			{
+				var x = index % width;
+				var y = index / width;
+
+				float yMin = (y + 0) / (float)height * 2 - 1;
+				float yMax = (y + 1) / (float)height * 2 - 1;
+				float xMin = (x + 0) / (float)width * 2 - 1 + 0.5f / width;
+				float xMax = (x + 1) / (float)width * 2 - 1 + 0.5f / width;
+				_positions.Add(new Vector3(xMin, yMin));
+				_positions.Add(new Vector3(xMin, yMax));
+				_positions.Add(new Vector3(xMax, yMax));
+
+				_indices.Add(_indices.Count);
+				_indices.Add(_indices.Count);
+				_indices.Add(_indices.Count);
+
+				var color = new Color32(_data[index * 4 + 0], _data[index * 4 + 1], _data[index * 4 + 2], _data[index * 4 + 3]);
+
+				_colors.Add(color);
+				_colors.Add(color);
+				_colors.Add(color);
+			}
+
+			_mesh.SetVertices(_positions);
+			_mesh.SetColors(_colors);
+			_mesh.SetTriangles(_indices, 0);
+			//_mesh.UploadMeshData(false);
+
+			_updateIndices.Clear();
+
+			Graphics.ExecuteCommandBuffer(_cb);
 		}
 	}
 }

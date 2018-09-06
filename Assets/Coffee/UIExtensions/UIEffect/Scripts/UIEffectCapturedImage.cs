@@ -97,7 +97,7 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Effect material.
 		/// </summary>
-		public virtual Material effectMaterial { get { return m_EffectMaterial; } }
+		public virtual Material effectMaterial { get; set; }
 
 		/// <summary>
 		/// Desampling rate of the generated RenderTexture.
@@ -152,6 +152,7 @@ namespace Coffee.UIExtensions
 		protected override void OnEnable()
 		{
 			base.OnEnable();
+			UpdateMaterial2();
 			if (m_CaptureOnEnable && Application.isPlaying)
 			{
 				Capture();
@@ -160,12 +161,15 @@ namespace Coffee.UIExtensions
 
 		protected override void OnDisable()
 		{
+			MaterialCache.Unregister(materialCache);
+			materialCache = null;
 			base.OnDisable();
 			if (m_CaptureOnEnable && Application.isPlaying)
 			{
 				_Release(false);
 				texture = null;
 			}
+
 		}
 
 		/// <summary>
@@ -438,7 +442,6 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public void OnAfterDeserialize()
 		{
-			UnityEditor.EditorApplication.delayCall += () => UpdateMaterial(true);
 		}
 
 		/// <summary>
@@ -447,31 +450,65 @@ namespace Coffee.UIExtensions
 		protected override void OnValidate ()
 		{
 			base.OnValidate ();
-			UnityEditor.EditorApplication.delayCall += () => UpdateMaterial(false);
+			UnityEditor.EditorApplication.delayCall += () => UpdateMaterial2();
 		}
+
+#endif
+
+
+		/// <summary>
+		/// Gets or sets the material cache.
+		/// </summary>
+		protected MaterialCache materialCache{ get; set; }
 
 		/// <summary>
 		/// Updates the material.
 		/// </summary>
 		/// <param name="ignoreInPlayMode">If set to <c>true</c> ignore in play mode.</param>
-		protected void UpdateMaterial(bool ignoreInPlayMode)
+		protected void UpdateMaterial2()
 		{
-			if(!this || ignoreInPlayMode && Application.isPlaying)
+			if (!this)
 			{
 				return;
 			}
 
-			var mat =  MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), m_ToneMode, m_ColorMode, m_BlurMode);
-			if (m_EffectMaterial != mat)
+			if (!m_EffectMaterial)
 			{
-				material = null;
-				m_EffectMaterial = mat;
-				_SetDirty();
+				var cache = MaterialCache.Register((uint)GetType().GetHashCode()<<32, ()=>Resources.Load<Material>(GetType().Name));
+				m_EffectMaterial = cache.material;
+			}
+
+			ulong hash = ((ulong)5 << 0) + ((ulong)m_ToneMode << 4) + ((ulong)m_ColorMode << 8) + ((ulong)m_BlurMode << 12);
+			if (materialCache != null && (materialCache.hash != hash || !isActiveAndEnabled || !m_EffectMaterial))
+			{
+				MaterialCache.Unregister(materialCache);
+				materialCache = null;
+			}
+
+			if (!isActiveAndEnabled || !m_EffectMaterial)
+			{
+				effectMaterial = null;
+			}
+			else if (materialCache != null && materialCache.hash == hash)
+			{
+				effectMaterial = materialCache.material;
+			}
+			else
+			{
+				materialCache = MaterialCache.Register(hash, () =>
+					{
+						var mat = new Material(m_EffectMaterial);
+						mat.name += "_" + hash;
+						mat.EnableKeyword(m_ToneMode.ToString().ToUpper());
+						mat.EnableKeyword(m_ColorMode.ToString().ToUpper());
+						mat.EnableKeyword(m_BlurMode.ToString().ToUpper());
+
+						return mat;
+					});
+				effectMaterial = materialCache.material;
 			}
 		}
-#endif
-
-
+		
 
 		//################################
 		// Private Members.
@@ -516,7 +553,7 @@ namespace Coffee.UIExtensions
 		void _SetDirty()
 		{
 #if UNITY_EDITOR
-			if(Application.isPlaying)
+			if(!Application.isPlaying)
 			{
 				UnityEditor.EditorUtility.SetDirty(this);
 			}

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using System.IO;
+using System;
 
 namespace Coffee.UIExtensions
 {
@@ -50,6 +51,17 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public Material effectMaterial { get { return m_EffectMaterial; } }
 
+		/// <summary>
+		/// Gets or sets the material cache.
+		/// </summary>
+		protected MaterialCache materialCache{ get; set; }
+
+		/// <summary>
+		/// Gets hash for effect.
+		/// </summary>
+		protected virtual ulong effectHash { get { return 0; } }
+
+
 #if UNITY_EDITOR
 		protected override void Reset()
 		{
@@ -62,17 +74,14 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		protected override void OnValidate()
 		{
-#if UNITY_EDITOR
 			SetupPtexMaterial();
-#endif
-			var mat = GetMaterial();
-			if (m_EffectMaterial != mat)
+
+			if (ptex != null)
 			{
-				m_EffectMaterial = mat;
-				UnityEditor.EditorUtility.SetDirty(this);
+				ptex.Register(this);
 			}
 
-			ModifyMaterial();
+			ModifyMaterial(effectHash);
 			targetGraphic.SetVerticesDirty();
 			SetDirty();
 		}
@@ -120,26 +129,45 @@ namespace Coffee.UIExtensions
 		{
 			return null;
 		}
+#endif
 
 		protected void SetupPtexMaterial()
 		{
 			if (!m_PtexMaterial)
 			{
-				m_PtexMaterial = UnityEditor.AssetDatabase.FindAssets("t:Material ParameterTexture")
-					.Select(x => UnityEditor.AssetDatabase.GUIDToAssetPath(x))
-					.Where(x => Path.GetFileNameWithoutExtension(x) == "ParameterTexture")
-					.Select(x => UnityEditor.AssetDatabase.LoadAssetAtPath<Material>(x))
-					.FirstOrDefault();
 			}
 		}
-#endif
 
 		/// <summary>
 		/// Modifies the material.
 		/// </summary>
-		public virtual void ModifyMaterial()
+		public virtual void ModifyMaterial(ulong hash, Func<Material> onCreate = null)
 		{
-			targetGraphic.material = isActiveAndEnabled ? m_EffectMaterial : null;
+			if (!m_EffectMaterial)
+			{
+				var cache = MaterialCache.Register((uint)GetType().GetHashCode()<<32, ()=>Resources.Load<Material>(GetType().Name));
+				m_EffectMaterial = cache.material;
+			}
+
+			if (materialCache != null && (materialCache.hash != hash || !isActiveAndEnabled || !m_EffectMaterial))
+			{
+				MaterialCache.Unregister(materialCache);
+				materialCache = null;
+			}
+
+			if (!isActiveAndEnabled || !m_EffectMaterial || onCreate == null)
+			{
+				graphic.material = null;
+			}
+			else if (materialCache != null && materialCache.hash == hash)
+			{
+				graphic.material = materialCache.material;
+			}
+			else
+			{
+				materialCache = MaterialCache.Register(hash, onCreate);
+				graphic.material = materialCache.material;
+			}
 		}
 
 		/// <summary>
@@ -147,14 +175,12 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		protected override void OnEnable()
 		{
-#if UNITY_EDITOR
 			SetupPtexMaterial();
-#endif
 			if (ptex != null)
 			{
 				ptex.Register(this);
 			}
-			ModifyMaterial();
+			ModifyMaterial(effectHash);
 			targetGraphic.SetVerticesDirty();
 			SetDirty();
 		}
@@ -164,7 +190,9 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		protected override void OnDisable()
 		{
-			ModifyMaterial();
+			MaterialCache.Unregister(materialCache);
+			materialCache = null;
+			ModifyMaterial(0);
 			targetGraphic.SetVerticesDirty();
 			if (ptex != null)
 			{
@@ -173,7 +201,7 @@ namespace Coffee.UIExtensions
 		}
 
 		/// <summary>
-		/// Mark the UIEffect as dirty.
+		/// Mark the effect as dirty.
 		/// </summary>
 		protected virtual void SetDirty()
 		{

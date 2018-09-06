@@ -13,7 +13,6 @@ namespace Coffee.UIExtensions
 		//################################
 		// Constant or Static Members.
 		//################################
-		public const string shaderName = "UI/Hidden/UI-Effect-Dissolve";
 		static readonly ParameterTexture _ptex = new ParameterTexture(8, 128, "_ParamTex");
 
 
@@ -123,9 +122,9 @@ namespace Coffee.UIExtensions
 				if (m_NoiseTexture != value)
 				{
 					m_NoiseTexture = value;
-					if (graphic)
+					if (targetGraphic)
 					{
-						ModifyMaterial();
+						ModifyMaterial(effectHash);
 					}
 				}
 			}
@@ -199,40 +198,29 @@ namespace Coffee.UIExtensions
 		public override ParameterTexture ptex { get { return _ptex; } }
 
 		/// <summary>
+		/// Gets hash for effect.
+		/// </summary>
+		protected override ulong effectHash { get { return ((ulong)2 << 0) + ((ulong)m_ColorMode << 4) + (m_NoiseTexture ? (uint)m_NoiseTexture.GetInstanceID() << 8 : 0); } }
+
+		/// <summary>
 		/// Modifies the material.
 		/// </summary>
-		public override void ModifyMaterial()
+		public override void ModifyMaterial(ulong hash, Func<Material> onCreate = null)
 		{
-			ulong hash = (m_NoiseTexture ? (uint)m_NoiseTexture.GetInstanceID() : 0) + ((ulong)1 << 32) + ((ulong)m_ColorMode << 36);
-			if (_materialCache != null && (_materialCache.hash != hash || !isActiveAndEnabled || !m_EffectMaterial))
-			{
-				MaterialCache.Unregister(_materialCache);
-				_materialCache = null;
-			}
+			base.ModifyMaterial(hash, () =>
+				{
+					var mat = new Material(m_EffectMaterial);
+					mat.name += "_" + hash;
+					mat.EnableKeyword(m_ColorMode.ToString().ToUpper());
 
-			if (!isActiveAndEnabled || !m_EffectMaterial)
-			{
-				graphic.material = null;
-			}
-			else if (!m_NoiseTexture)
-			{
-				graphic.material = m_EffectMaterial;
-			}
-			else if (_materialCache != null && _materialCache.hash == hash)
-			{
-				graphic.material = _materialCache.material;
-			}
-			else
-			{
-				_materialCache = MaterialCache.Register(hash, m_NoiseTexture, () =>
+					if(m_NoiseTexture)
 					{
-						var mat = new Material(m_EffectMaterial);
-						mat.name += "_" + m_NoiseTexture.name;
 						mat.SetTexture("_NoiseTex", m_NoiseTexture);
-						return mat;
-					});
-				graphic.material = _materialCache.material;
-			}
+					}
+
+					ptex.RegisterMaterial(mat);
+					return mat;
+				});
 		}
 
 		/// <summary>
@@ -281,7 +269,6 @@ namespace Coffee.UIExtensions
 
 		protected override void SetDirty()
 		{
-			ptex.RegisterMaterial(targetGraphic.material);
 			ptex.SetData(this, 0, m_Location);	// param1.x : location
 			ptex.SetData(this, 1, m_Width);		// param1.y : width
 			ptex.SetData(this, 2, m_Softness);	// param1.z : softness
@@ -315,25 +302,20 @@ namespace Coffee.UIExtensions
 			m_Runner.OnEnable(f => location = f);
 		}
 
+		/// <summary>
+		/// This function is called when the behaviour becomes disabled.
+		/// </summary>
 		protected override void OnDisable()
 		{
-			MaterialCache.Unregister(_materialCache);
-			_materialCache = null;
 			m_Runner.OnDisable();
 			base.OnDisable();
 		}
 
 #if UNITY_EDITOR
-		/// <summary>
-		/// Gets the material.
-		/// </summary>
-		/// <returns>The material.</returns>
-		protected override Material GetMaterial()
-		{
-			return MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), m_ColorMode);
-		}
-
 		#pragma warning disable 0612
+		/// <summary>
+		/// Upgrade instance if needed.
+		/// </summary>
 		protected override void UpgradeIfNeeded()
 		{
 			// Upgrade for v3.0.0
@@ -348,10 +330,5 @@ namespace Coffee.UIExtensions
 		}
 		#pragma warning restore 0612
 #endif
-
-		//################################
-		// Private Members.
-		//################################
-		MaterialCache _materialCache = null;
 	}
 }

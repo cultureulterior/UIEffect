@@ -16,12 +16,27 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - first:
+        name: _ParamTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -44,6 +59,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -63,37 +81,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21026428964303540
 Material:
   serializedVersion: 6
@@ -110,37 +110,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21027069994720160
 Material:
   serializedVersion: 6
@@ -157,43 +139,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ParamTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21039963853110620
 Material:
   serializedVersion: 6
@@ -210,6 +168,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -222,6 +186,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -244,6 +211,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -263,37 +233,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21052465468044756
 Material:
   serializedVersion: 6
@@ -310,37 +262,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21066333305903936
 Material:
   serializedVersion: 6
@@ -357,37 +291,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21075981732791042
 Material:
   serializedVersion: 6
@@ -404,6 +320,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -416,6 +338,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -438,6 +363,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -457,37 +385,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21101263305935548
 Material:
   serializedVersion: 6
@@ -504,37 +414,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21104109730402914
 Material:
   serializedVersion: 6
@@ -551,37 +443,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21105261449943414
 Material:
   serializedVersion: 6
@@ -598,37 +472,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21109508837310648
 Material:
   serializedVersion: 6
@@ -645,37 +501,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21111652731778514
 Material:
   serializedVersion: 6
@@ -692,37 +530,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21116803245207008
 Material:
   serializedVersion: 6
@@ -739,37 +559,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21122981926976530
 Material:
   serializedVersion: 6
@@ -786,6 +588,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -798,6 +606,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -820,6 +631,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -839,37 +653,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21131018956888464
 Material:
   serializedVersion: 6
@@ -886,37 +682,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21137937571243814
 Material:
   serializedVersion: 6
@@ -933,37 +711,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21145977231806290
 Material:
   serializedVersion: 6
@@ -980,37 +740,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21149323267498812
 Material:
   serializedVersion: 6
@@ -1027,37 +769,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21166942708938158
 Material:
   serializedVersion: 6
@@ -1074,37 +798,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21175420890653266
 Material:
   serializedVersion: 6
@@ -1121,37 +827,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21185002339311568
 Material:
   serializedVersion: 6
@@ -1168,6 +856,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -1180,6 +874,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -1202,6 +899,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -1221,37 +921,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21192233312017768
 Material:
   serializedVersion: 6
@@ -1268,37 +950,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21197897579119900
 Material:
   serializedVersion: 6
@@ -1315,37 +979,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21199877168527062
 Material:
   serializedVersion: 6
@@ -1362,37 +1008,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21212477583257292
 Material:
   serializedVersion: 6
@@ -1409,37 +1037,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21232036731743694
 Material:
   serializedVersion: 6
@@ -1456,37 +1066,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21240296032697190
 Material:
   serializedVersion: 6
@@ -1503,37 +1095,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21255923207793296
 Material:
   serializedVersion: 6
@@ -1550,37 +1124,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21258387908413332
 Material:
   serializedVersion: 6
@@ -1597,37 +1153,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21271924954905420
 Material:
   serializedVersion: 6
@@ -1644,6 +1182,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -1656,6 +1200,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -1678,6 +1225,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -1697,37 +1247,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21302104002556128
 Material:
   serializedVersion: 6
@@ -1744,37 +1276,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21303963782861626
 Material:
   serializedVersion: 6
@@ -1791,37 +1305,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21305736874167728
 Material:
   serializedVersion: 6
@@ -1838,43 +1334,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ParamTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21306681885004364
 Material:
   serializedVersion: 6
@@ -1891,37 +1363,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21320668284859588
 Material:
   serializedVersion: 6
@@ -1938,37 +1392,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21330216548013380
 Material:
   serializedVersion: 6
@@ -1985,37 +1421,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21336195750137204
 Material:
   serializedVersion: 6
@@ -2032,37 +1450,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21348001306660082
 Material:
   serializedVersion: 6
@@ -2079,37 +1479,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21348190401746968
 Material:
   serializedVersion: 6
@@ -2126,37 +1508,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21359290647485348
 Material:
   serializedVersion: 6
@@ -2173,37 +1537,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21361395707633912
 Material:
   serializedVersion: 6
@@ -2220,37 +1566,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21364950658099354
 Material:
   serializedVersion: 6
@@ -2267,37 +1595,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21378012982496048
 Material:
   serializedVersion: 6
@@ -2314,37 +1624,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21378149258337820
 Material:
   serializedVersion: 6
@@ -2361,37 +1653,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21380371216467826
 Material:
   serializedVersion: 6
@@ -2408,37 +1682,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21380512493198096
 Material:
   serializedVersion: 6
@@ -2455,37 +1711,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21405390060167114
 Material:
   serializedVersion: 6
@@ -2502,6 +1740,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -2514,6 +1758,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -2536,6 +1783,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -2555,37 +1805,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21415477525834930
 Material:
   serializedVersion: 6
@@ -2602,37 +1834,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21430195719184000
 Material:
   serializedVersion: 6
@@ -2649,37 +1863,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21437925998559310
 Material:
   serializedVersion: 6
@@ -2696,37 +1892,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21440092419426906
 Material:
   serializedVersion: 6
@@ -2743,37 +1921,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21444967751105098
 Material:
   serializedVersion: 6
@@ -2790,37 +1950,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21450770079124654
 Material:
   serializedVersion: 6
@@ -2837,37 +1979,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21453664544427490
 Material:
   serializedVersion: 6
@@ -2884,37 +2008,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21467518254157304
 Material:
   serializedVersion: 6
@@ -2931,6 +2037,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -2943,6 +2055,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -2965,6 +2080,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -2984,37 +2102,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21481346700311234
 Material:
   serializedVersion: 6
@@ -3031,6 +2131,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -3043,6 +2149,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -3065,6 +2174,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -3084,6 +2196,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -3096,6 +2214,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -3118,6 +2239,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -3137,6 +2261,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -3149,6 +2279,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -3171,6 +2304,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -3190,37 +2326,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21532343593189452
 Material:
   serializedVersion: 6
@@ -3237,37 +2355,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21533667629458412
 Material:
   serializedVersion: 6
@@ -3284,37 +2384,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21542047413524304
 Material:
   serializedVersion: 6
@@ -3331,37 +2413,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21544716102375364
 Material:
   serializedVersion: 6
@@ -3378,37 +2442,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21545629178218474
 Material:
   serializedVersion: 6
@@ -3425,37 +2471,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21560746059913494
 Material:
   serializedVersion: 6
@@ -3472,37 +2500,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21563344409783084
 Material:
   serializedVersion: 6
@@ -3519,6 +2529,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -3531,6 +2547,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -3553,6 +2572,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -3572,37 +2594,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21576230583202306
 Material:
   serializedVersion: 6
@@ -3619,37 +2623,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21579131057152204
 Material:
   serializedVersion: 6
@@ -3666,37 +2652,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21588405465634874
 Material:
   serializedVersion: 6
@@ -3713,37 +2681,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21597123945508062
 Material:
   serializedVersion: 6
@@ -3760,37 +2710,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21600722614953990
 Material:
   serializedVersion: 6
@@ -3807,37 +2739,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21605587663562914
 Material:
   serializedVersion: 6
@@ -3854,37 +2768,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21610745492908456
 Material:
   serializedVersion: 6
@@ -3901,37 +2797,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21613427633448394
 Material:
   serializedVersion: 6
@@ -3948,37 +2826,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21626828109100462
 Material:
   serializedVersion: 6
@@ -3995,37 +2855,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21639588145429544
 Material:
   serializedVersion: 6
@@ -4042,37 +2884,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21653387824655390
 Material:
   serializedVersion: 6
@@ -4089,37 +2913,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21661642508956528
 Material:
   serializedVersion: 6
@@ -4136,37 +2942,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21661871162831128
 Material:
   serializedVersion: 6
@@ -4183,37 +2971,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21663013170243334
 Material:
   serializedVersion: 6
@@ -4230,37 +3000,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21666358306453470
 Material:
   serializedVersion: 6
@@ -4277,37 +3029,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21668316807213568
 Material:
   serializedVersion: 6
@@ -4324,37 +3058,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21672675497823216
 Material:
   serializedVersion: 6
@@ -4371,37 +3087,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21695855126676214
 Material:
   serializedVersion: 6
@@ -4418,37 +3116,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21696752101198370
 Material:
   serializedVersion: 6
@@ -4465,37 +3145,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21701854708980174
 Material:
   serializedVersion: 6
@@ -4512,37 +3174,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21705644928765800
 Material:
   serializedVersion: 6
@@ -4559,37 +3203,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21706452675254552
 Material:
   serializedVersion: 6
@@ -4606,37 +3232,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21709795224992298
 Material:
   serializedVersion: 6
@@ -4653,43 +3261,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ParamTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21724091816847400
 Material:
   serializedVersion: 6
@@ -4706,37 +3290,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21732181610132420
 Material:
   serializedVersion: 6
@@ -4753,6 +3319,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -4765,6 +3337,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -4787,6 +3362,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -4806,37 +3384,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21738761090841570
 Material:
   serializedVersion: 6
@@ -4853,37 +3413,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21745487242921564
 Material:
   serializedVersion: 6
@@ -4900,37 +3442,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21758506112687914
 Material:
   serializedVersion: 6
@@ -4947,6 +3471,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -4959,6 +3489,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -4981,6 +3514,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -5000,37 +3536,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21774372728878936
 Material:
   serializedVersion: 6
@@ -5047,37 +3565,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21778934727406118
 Material:
   serializedVersion: 6
@@ -5094,43 +3594,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ParamTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21783431032102164
 Material:
   serializedVersion: 6
@@ -5147,37 +3623,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21786341683153736
 Material:
   serializedVersion: 6
@@ -5194,6 +3652,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -5206,6 +3670,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -5228,6 +3695,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -5247,37 +3717,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21793963511044070
 Material:
   serializedVersion: 6
@@ -5294,37 +3746,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21795397433206836
 Material:
   serializedVersion: 6
@@ -5341,37 +3775,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21800671795679014
 Material:
   serializedVersion: 6
@@ -5388,37 +3804,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21806928481719972
 Material:
   serializedVersion: 6
@@ -5435,37 +3833,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21846284721920408
 Material:
   serializedVersion: 6
@@ -5482,37 +3862,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21849905517297320
 Material:
   serializedVersion: 6
@@ -5529,37 +3891,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21856943469927286
 Material:
   serializedVersion: 6
@@ -5576,37 +3920,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21857184430936670
 Material:
   serializedVersion: 6
@@ -5623,37 +3949,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21866767477205256
 Material:
   serializedVersion: 6
@@ -5670,37 +3978,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21875683972062094
 Material:
   serializedVersion: 6
@@ -5717,37 +4007,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21876982461912130
 Material:
   serializedVersion: 6
@@ -5764,37 +4036,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21901242579300618
 Material:
   serializedVersion: 6
@@ -5811,37 +4065,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21905403339881664
 Material:
   serializedVersion: 6
@@ -5858,6 +4094,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -5870,6 +4112,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -5892,6 +4137,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
@@ -5911,37 +4159,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21919113364331978
 Material:
   serializedVersion: 6
@@ -5958,37 +4188,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21930548911372394
 Material:
   serializedVersion: 6
@@ -6005,37 +4217,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21932619879041906
 Material:
   serializedVersion: 6
@@ -6052,37 +4246,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21936983168141514
 Material:
   serializedVersion: 6
@@ -6099,37 +4275,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21960190213409036
 Material:
   serializedVersion: 6
@@ -6146,37 +4304,19 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
-        name: _MainTex
+        name: <noninit>
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _ColorMask
-      second: 15
-    - first:
-        name: _Stencil
-      second: 0
-    - first:
-        name: _StencilComp
-      second: 8
-    - first:
-        name: _StencilOp
-      second: 0
-    - first:
-        name: _StencilReadMask
-      second: 255
-    - first:
-        name: _StencilWriteMask
-      second: 255
-    - first:
-        name: _UseUIAlphaClip
+        name: <noninit>
       second: 0
     m_Colors:
     - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
 --- !u!21 &21970657036975932
 Material:
   serializedVersion: 6
@@ -6193,6 +4333,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _MainTex
       second:
         m_Texture: {fileID: 0}
@@ -6205,6 +4351,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
     - first:
         name: _ColorMask
       second: 15
@@ -6227,6 +4376,9 @@ Material:
         name: _UseUIAlphaClip
       second: 0
     m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 1, b: 0, a: NaN}
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}

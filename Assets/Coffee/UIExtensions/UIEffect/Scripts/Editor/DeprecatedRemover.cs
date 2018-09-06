@@ -21,6 +21,7 @@ namespace Coffee.UIExtensions.UIEffectDepricated
 			"156b57fee6ef941958e66a129ce387e2",	// UICustomEffect.cs
 			"a4961e148a8cd4fe0b84dddc2741894a",	// UICustomEffectEditor.cs
 			"7b1ed09bdf5e54042b5cd1fbe69361bf",	// MaterialBundle.cs
+			"70261fa2760d4c040ac28aebb1f155fb",	// MaterialResolver.cs
 		};
 
 

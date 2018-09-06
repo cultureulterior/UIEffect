@@ -102,21 +102,10 @@ namespace Coffee.UIExtensions
 
 		[SerializeField] bool m_AdvancedBlur = false;
 
-		public enum BlurEx
-		{
-			None = 0,
-			Ex = 1,
-		}
 
 		//################################
 		// Public Members.
 		//################################
-		/// <summary>
-		/// Graphic affected by the UIEffect.
-		/// </summary>
-		[System.Obsolete ("Use targetGraphic instead (UnityUpgradable) -> targetGraphic")]
-		new public Graphic graphic { get { return base.graphic; } }
-
 		/// <summary>
 		/// Tone effect level between 0(no effect) and 1(complete effect).
 		/// </summary>
@@ -158,31 +147,42 @@ namespace Coffee.UIExtensions
 		public override ParameterTexture ptex { get { return _ptex; } }
 
 		/// <summary>
+		/// Gets hash for effect.
+		/// </summary>
+		protected override ulong effectHash { get { return ((ulong)1 << 0) + ((ulong)m_ToneMode << 4) + ((ulong)m_ColorMode << 8) + ((ulong)m_BlurMode << 12) + ((ulong)(m_BlurMode != BlurMode.None && m_AdvancedBlur ? 1 : 0) << 16); } }
+
+		/// <summary>
+		/// Modifies the material.
+		/// </summary>
+		public override void ModifyMaterial(ulong hash, Func<Material> onCreate = null)
+		{
+			base.ModifyMaterial(hash, () =>
+				{
+					var mat = new Material(m_EffectMaterial);
+					mat.name += "_" + hash;
+					mat.EnableKeyword(m_ToneMode.ToString().ToUpper());
+					mat.EnableKeyword(m_ColorMode.ToString().ToUpper());
+					mat.EnableKeyword(m_BlurMode.ToString().ToUpper());
+					if (m_AdvancedBlur)
+					{
+						mat.EnableKeyword("EX");
+					}
+					ptex.RegisterMaterial(mat);
+					return mat;
+				});
+		}
+
+		/// <summary>
 		/// Modifies the mesh.
 		/// </summary>
 		public override void ModifyMesh(VertexHelper vh)
 		{
-			if (!isActiveAndEnabled || (m_ToneMode == ToneMode.None && m_ColorMode == ColorMode.Multiply && m_BlurMode == BlurMode.None))
+			if (!isActiveAndEnabled)
 			{
 				return;
 			}
 
-//			UIVertex vt = default(UIVertex);
-//			int count = vh.currentVertCount;
 			float normalizedIndex = ptex.GetNormalizedIndex(this);
-//
-//			for (int i = 0; i < count; i++)
-//			{
-//				// Set prameters to vertex.
-//				vh.PopulateUIVertex(ref vt, i);
-//				vt.uv0 = new Vector2(
-//					Packer.ToFloat(vt.uv0.x, vt.uv0.y),
-//					normalizedIndex
-//				);
-//				vh.SetUIVertex(vt, i);
-//			}
-
-
 
 			if (m_AdvancedBlur)
 			{
@@ -253,7 +253,6 @@ namespace Coffee.UIExtensions
 								uv0.y = uv0.y * size.y + tUV.y;
 							}
 
-//							vt.uv0 = new Vector2(Packer.ToFloat((uv0.x + 0.5f) / 2f, (uv0.y + 0.5f) / 2f), blur);
 							vt.uv0 = new Vector2(Packer.ToFloat((uv0.x + 0.5f) / 2f, (uv0.y + 0.5f) / 2f), normalizedIndex);
 							vt.position = pos;
 							vt.uv1 = uvMask;
@@ -285,142 +284,17 @@ namespace Coffee.UIExtensions
 
 		protected override void SetDirty()
 		{
-			ptex.RegisterMaterial(m_EffectMaterial);
 			ptex.SetData(this, 0, m_ToneLevel);	// param.x : effect factor
 			ptex.SetData(this, 1, m_ColorFactor);	// param.y : color factor
 			ptex.SetData(this, 2, m_Blur);	// param.z : blur factor
 		}
 
-//#if UNITY_EDITOR
-//
-//		protected override void OnValidate ()
-//		{
-//			base.OnValidate ();
-//			EditorApplication.delayCall += () => UpdateMaterial(false);
-//		}
-//
-//		public override void OnAfterDeserialize()
-//		{
-//			if (!m_CustomEffect)
-//			{
-//				EditorApplication.delayCall += () => UpdateMaterial (true);
-//			}
-//		}
-//
-//		void UpdateMaterial(bool onlyEditMode)
-//		{
-//			if(!this || onlyEditMode && Application.isPlaying)
-//			{
-//				return;
-//			}
-//
-//			var mat = (0 == toneMode) && (0 == colorMode) && (0 == blurMode)
-//				? null
-//				: GetOrGenerateMaterialVariant(Shader.Find(shaderName), toneMode, colorMode, blurMode);
-//
-//			if (m_EffectMaterial != mat || targetGraphic.material != mat)
-//			{
-//				targetGraphic.material = m_EffectMaterial = mat;
-//				EditorUtility.SetDirty(this);
-//				EditorUtility.SetDirty(targetGraphic);
-//			}
-//		}
-//		
-//
-//
-//		public static Material GetOrGenerateMaterialVariant(Shader shader, ToneMode tone, ColorMode color, BlurMode blur)
-//		{
-//			if (!shader)
-//				return null;
-//
-//			Material mat = GetMaterial(shader, tone, color, blur);
-//
-//			if (!mat)
-//			{
-//				Debug.Log("Generate material : " + GetVariantName(shader, tone, color, blur));
-//				mat = new Material(shader);
-//
-//				if (0 < tone)
-//					mat.EnableKeyword("" + tone.ToString().ToUpper());
-//				if (0 < color)
-//					mat.EnableKeyword("UI_COLOR_" + color.ToString().ToUpper());
-//				if (0 < blur)
-//					mat.EnableKeyword("UI_BLUR_" + blur.ToString().ToUpper());
-//
-//				mat.name = GetVariantName(shader, tone, color, blur);
-//				mat.hideFlags |= HideFlags.NotEditable;
-//
-//#if UIEFFECT_SEPARATE
-//				bool isMainAsset = true;
-//				string dir = Path.GetDirectoryName(GetDefaultMaterialPath (shader));
-//				string materialPath = Path.Combine(Path.Combine(dir, "Separated"), mat.name + ".mat");
-//#else
-//				bool isMainAsset = (0 == tone) && (0 == color) && (0 == blur);
-//				string materialPath = GetDefaultMaterialPath (shader);
-//#endif
-//				if (isMainAsset)
-//				{
-//					Directory.CreateDirectory(Path.GetDirectoryName(materialPath));
-//					AssetDatabase.CreateAsset(mat, materialPath);
-//					AssetDatabase.SaveAssets();
-//				}
-//				else
-//				{
-//					mat.hideFlags |= HideFlags.HideInHierarchy;
-//					AssetDatabase.AddObjectToAsset(mat, materialPath);
-//				}
-//			}
-//			return mat;
-//		}
-//
-//		public static Material GetMaterial(Shader shader, ToneMode tone, ColorMode color, BlurMode blur)
-//		{
-//			string variantName = GetVariantName(shader, tone, color, blur);
-//			return AssetDatabase.FindAssets("t:Material " + Path.GetFileName(shader.name))
-//				.Select(x => AssetDatabase.GUIDToAssetPath(x))
-//				.SelectMany(x => AssetDatabase.LoadAllAssetsAtPath(x))
-//				.OfType<Material>()
-//				.FirstOrDefault(x => x.name == variantName);
-//		}
-//
-//		public static string GetDefaultMaterialPath(Shader shader)
-//		{
-//			var name = Path.GetFileName (shader.name);
-//			return AssetDatabase.FindAssets("t:Material " + name)
-//				.Select(x => AssetDatabase.GUIDToAssetPath(x))
-//				.FirstOrDefault(x => Path.GetFileNameWithoutExtension(x) == name)
-//				?? ("Assets/Coffee/UIExtensions/UIEffect/Materials/" + name + ".mat");
-//		}
-//
-//		public static string GetVariantName(Shader shader, ToneMode tone, ColorMode color, BlurMode blur)
-//		{
-//			return
-//#if UIEFFECT_SEPARATE
-//				"[Separated] " + Path.GetFileName(shader.name)
-//#else
-//				Path.GetFileName(shader.name)
-//#endif
-//				+ (0 < tone ? "-" + tone : "")
-//				+ (0 < color ? "-" + color : "")
-//				+ (0 < blur ? "-" + blur : "");
-//		}
-//#endif
-
 #if UNITY_EDITOR
-		/// <summary>
-		/// Gets the material.
-		/// </summary>
-		/// <returns>The material.</returns>
-		protected override Material GetMaterial ()
-		{
-			if (m_ToneMode == ToneMode.None && m_ColorMode == ColorMode.Multiply && m_BlurMode == BlurMode.None)
-			{
-				return null;
-			}
-			return MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), m_ToneMode, m_ColorMode, m_BlurMode, m_AdvancedBlur ? BlurEx.Ex : BlurEx.None);
-		}
 
 		#pragma warning disable 0612
+		/// <summary>
+		/// Upgrade instance if needed.
+		/// </summary>
 		protected override void UpgradeIfNeeded()
 		{
 			// Upgrade for v3.0.0

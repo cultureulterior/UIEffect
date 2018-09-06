@@ -18,11 +18,11 @@ namespace Coffee.UIExtensions
 		[UnityEditor.InitializeOnLoadMethod]
 		static void ClearCache()
 		{
-			foreach (var cache in materialCaches)
-			{
-				cache.material = null;
-			}
-			materialCaches.Clear();
+//			foreach (var cache in materialCaches)
+//			{
+//				cache.material = null;
+//			}
+//			materialCaches.Clear();
 		}
 #endif
 
@@ -31,9 +31,18 @@ namespace Coffee.UIExtensions
 		public static MaterialCache Register(ulong hash, Texture texture, System.Func<Material> onCreateMaterial)
 		{
 			var cache = materialCaches.FirstOrDefault(x => x.hash == hash);
-			if (cache != null)
+			if (cache != null && cache.material)
 			{
-				cache.referenceCount++;
+				if (cache.material)
+				{
+					cache.referenceCount++;
+				}
+				else
+				{
+					
+					materialCaches.Remove(cache);
+					cache = null;
+				}
 			}
 			if (cache == null)
 			{

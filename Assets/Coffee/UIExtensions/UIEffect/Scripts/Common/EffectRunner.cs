@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections.Generic;
 
 namespace Coffee.UIExtensions
 {
@@ -53,15 +54,23 @@ namespace Coffee.UIExtensions
 //			this.updateMode = updateMode;
 //		}
 
-		static Action onWillRenderCanvases;
+		static List<Action> updates;
 
 		public void OnEnable(Action<float> callback)
 		{
-			onWillRenderCanvases -= OnWillRenderCanvases;
-			onWillRenderCanvases += OnWillRenderCanvases;
 
-			Canvas.willRenderCanvases -= WillRenderCanvases;
-			Canvas.willRenderCanvases += WillRenderCanvases;
+			if (updates == null)
+			{
+				updates = new List<Action>();
+				Canvas.willRenderCanvases += ()=>{
+					var count = updates.Count;
+					for (int i = 0; i < count; i++)
+					{
+						updates[i].Invoke();
+					}
+				};
+			}
+			updates.Add(OnWillRenderCanvases);
 
 			_time = 0;
 			this._callback = callback;
@@ -82,7 +91,7 @@ namespace Coffee.UIExtensions
 		public void OnDisable()
 		{
 			_callback = null;
-			onWillRenderCanvases -= OnWillRenderCanvases;
+			updates.Remove(OnWillRenderCanvases);
 		}
 
 		/// <summary>
@@ -100,13 +109,6 @@ namespace Coffee.UIExtensions
 		float _time = 0;
 		Action<float> _callback;
 
-		static void WillRenderCanvases()
-		{
-			if (onWillRenderCanvases != null)
-			{
-				onWillRenderCanvases.Invoke();
-			}
-		}
 
 		void OnWillRenderCanvases()
 		{

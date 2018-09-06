@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 namespace Coffee.UIExtensions
 {
@@ -11,7 +12,6 @@ namespace Coffee.UIExtensions
 		//################################
 		// Constant or Static Members.
 		//################################
-		public const string shaderName = "UI/Hidden/UI-Effect-Transition";
 		static readonly ParameterTexture _ptex = new ParameterTexture(8, 128, "_ParamTex");
 
 		/// <summary>
@@ -19,7 +19,6 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public enum EffectMode
 		{
-			None = 0,
 			Fade = 1,
 			Cutoff = 2,
 			Dissolve = 3,
@@ -64,7 +63,7 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public Texture transitionTexture
 		{
-			get { return m_TransitionTexture; }
+			get { return m_TransitionTexture ?? (m_EffectMaterial ? m_EffectMaterial.GetTexture("_TransitionTexture") : (Texture)null); }
 			set
 			{
 				if (m_TransitionTexture != value)
@@ -72,7 +71,7 @@ namespace Coffee.UIExtensions
 					m_TransitionTexture = value;
 					if (graphic)
 					{
-						ModifyMaterial();
+						ModifyMaterial(effectHash);
 					}
 				}
 			}
@@ -102,6 +101,11 @@ namespace Coffee.UIExtensions
 		/// Gets the parameter texture.
 		/// </summary>
 		public override ParameterTexture ptex { get { return _ptex; } }
+
+		/// <summary>
+		/// Gets hash for effect.
+		/// </summary>
+		protected override ulong effectHash { get { return ((ulong)4 << 0) + ((ulong)m_EffectMode << 4) + (m_TransitionTexture ? (uint)m_TransitionTexture.GetInstanceID() << 8 : 0); } }
 
 		/// <summary>
 		/// Dissolve edge width.
@@ -156,38 +160,22 @@ namespace Coffee.UIExtensions
 		/// <summary>
 		/// Modifies the material.
 		/// </summary>
-		public override void ModifyMaterial()
+		public override void ModifyMaterial(ulong hash, Func<Material> onCreate = null)
 		{
-			ulong hash = (m_TransitionTexture ? (uint)m_TransitionTexture.GetInstanceID() : 0) + ((ulong)2 << 32) + ((ulong)m_EffectMode << 36);
-			if (_materialCache != null && (_materialCache.hash != hash || !isActiveAndEnabled || !m_EffectMaterial))
-			{
-				MaterialCache.Unregister(_materialCache);
-				_materialCache = null;
-			}
+			base.ModifyMaterial(hash, () =>
+				{
+					var mat = new Material(m_EffectMaterial);
+					mat.name += "_" + hash;
+					mat.EnableKeyword(m_EffectMode.ToString().ToUpper());
 
-			if (!isActiveAndEnabled || !m_EffectMaterial)
-			{
-				graphic.material = null;
-			}
-			else if (!m_TransitionTexture)
-			{
-				graphic.material = m_EffectMaterial;
-			}
-			else if (_materialCache != null && _materialCache.hash == hash)
-			{
-				graphic.material = _materialCache.material;
-			}
-			else
-			{
-				_materialCache = MaterialCache.Register(hash, m_TransitionTexture, () =>
+					if(m_TransitionTexture)
 					{
-						var mat = new Material(m_EffectMaterial);
-						mat.name += "_" + m_TransitionTexture.name;
 						mat.SetTexture("_TransitionTexture", m_TransitionTexture);
-						return mat;
-					});
-				graphic.material = _materialCache.material;
-			}
+					}
+
+					ptex.RegisterMaterial(mat);
+					return mat;
+				});
 		}
 
 		/// <summary>
@@ -195,7 +183,7 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public override void ModifyMesh(VertexHelper vh)
 		{
-			if (!isActiveAndEnabled || m_EffectMode == EffectMode.None)
+			if (!isActiveAndEnabled)
 			{
 				return;
 			}
@@ -237,16 +225,9 @@ namespace Coffee.UIExtensions
 		//################################
 		// Protected Members.
 		//################################
-		protected override void OnDisable()
-		{
-			MaterialCache.Unregister(_materialCache);
-			_materialCache = null;
-			base.OnDisable();
-		}
 
 		protected override void SetDirty()
 		{
-			ptex.RegisterMaterial(targetGraphic.material);
 			ptex.SetData(this, 0, m_EffectFactor);	// param1.x : effect factor
 			if (m_EffectMode == EffectMode.Dissolve)
 			{
@@ -263,17 +244,10 @@ namespace Coffee.UIExtensions
 		/// Gets the material.
 		/// </summary>
 		/// <returns>The material.</returns>
-		protected override Material GetMaterial()
-		{
-			return m_EffectMode != EffectMode.None
-				? MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName), m_EffectMode)
-				: null;
-		}
 #endif
 
 		//################################
 		// Private Members.
 		//################################
-		MaterialCache _materialCache = null;
 	}
 }

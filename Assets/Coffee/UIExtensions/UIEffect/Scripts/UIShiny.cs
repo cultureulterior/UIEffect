@@ -23,7 +23,6 @@ namespace Coffee.UIExtensions
 		//################################
 		// Constant or Static Members.
 		//################################
-		public const string shaderName = "UI/Hidden/UI-Effect-Shiny";
 		static readonly ParameterTexture _ptex = new ParameterTexture(8, 128, "_ParamTex");
 
 
@@ -247,6 +246,11 @@ namespace Coffee.UIExtensions
 		public override ParameterTexture ptex { get { return _ptex; } }
 
 		/// <summary>
+		/// Gets hash for effect.
+		/// </summary>
+		protected override ulong effectHash { get { return ((ulong)3 << 0); } }
+
+		/// <summary>
 		/// This function is called when the object becomes enabled and active.
 		/// </summary>
 		protected override void OnEnable()
@@ -272,10 +276,6 @@ namespace Coffee.UIExtensions
 //		}
 
 #if UNITY_EDITOR
-		protected override Material GetMaterial()
-		{
-			return MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName));
-		}
 
 		#pragma warning disable 0612
 		protected override void UpgradeIfNeeded()
@@ -303,6 +303,20 @@ namespace Coffee.UIExtensions
 //				.FirstOrDefault(x => x.name == name);
 //		}
 #endif
+
+		/// <summary>
+		/// Modifies the material.
+		/// </summary>
+		public override void ModifyMaterial(ulong hash, Func<Material> onCreate = null)
+		{
+			base.ModifyMaterial(hash, () =>
+				{
+					var mat = new Material(m_EffectMaterial);
+					mat.name += "_" + hash;
+					ptex.RegisterMaterial(mat);
+					return mat;
+				});
+		}
 
 		/// <summary>
 		/// Modifies the mesh.
@@ -363,7 +377,6 @@ namespace Coffee.UIExtensions
 
 		protected override void SetDirty()
 		{
-			ptex.RegisterMaterial(targetGraphic.material);
 			ptex.SetData(this, 0, m_Location);	// param1.x : location
 			ptex.SetData(this, 1, m_Width);		// param1.y : width
 			ptex.SetData(this, 2, m_Softness);	// param1.z : softness

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using System;
 
 
 namespace Coffee.UIExtensions
@@ -15,8 +16,7 @@ namespace Coffee.UIExtensions
 		//################################
 		// Constant or Static Members.
 		//################################
-		public const string shaderName = "UI/Hidden/UI-Effect-HSV";
-		static readonly ParameterTexture _ptex = new ParameterTexture(7, 128, "_ParamTex");
+		static readonly ParameterTexture _ptex = new ParameterTexture(8, 128, "_ParamTex");
 
 
 		//################################
@@ -123,12 +123,24 @@ namespace Coffee.UIExtensions
 		/// </summary>
 		public override ParameterTexture ptex { get { return _ptex; } }
 
-#if UNITY_EDITOR
-		protected override Material GetMaterial()
+		/// <summary>
+		/// Gets hash for effect.
+		/// </summary>
+		protected override ulong effectHash { get { return ((ulong)5 << 0); } }
+
+		/// <summary>
+		/// Modifies the material.
+		/// </summary>
+		public override void ModifyMaterial(ulong hash, Func<Material> onCreate = null)
 		{
-			return MaterialResolver.GetOrGenerateMaterialVariant(Shader.Find(shaderName));
+			base.ModifyMaterial(hash, () =>
+				{
+					var mat = new Material(m_EffectMaterial);
+					mat.name += "_" + hash;
+					ptex.RegisterMaterial(mat);
+					return mat;
+				});
 		}
-#endif
 
 		/// <summary>
 		/// Modifies the mesh.
@@ -167,9 +179,5 @@ namespace Coffee.UIExtensions
 			ptex.SetData(this, 5, m_Saturation + 0.5f);	// param2.y : saturation shift
 			ptex.SetData(this, 6, m_Value + 0.5f);		// param2.z : value shift
 		}
-
-		//################################
-		// Private Members.
-		//################################
 	}
 }
